@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MINS MEDIA – Multimedia Creative System</title>
+  <meta name="description" content="MINS MEDIA Creative Home – Sistem multimedia terintegrasi: video, audio, visual, artikel, dan edukasi kreatif." />
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- ICON -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    :root{
+      --primary:#2fb9b3;
+      --secondary:#6b7fbf;
+      --dark:#0f172a;
+      --light:#f8fafc;
+      --glass:rgba(255,255,255,0.08);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:'Inter',sans-serif;
+      background:radial-gradient(circle at top,var(--dark),#020617);
+      color:#e5e7eb;
+      overflow-x:hidden;
+    }
+    a{text-decoration:none;color:inherit}
+
+    /* HERO */
+    header{
+      position:relative;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:80px 20px;
+    }
+    header::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(135deg,var(--primary),var(--secondary));
+      opacity:.15;
+    }
+    .hero{
+      position:relative;
+      max-width:900px;
+      z-index:2;
+    }
+    .hero img{width:140px;margin-bottom:30px}
+    .hero h1{font-size:3.5rem;margin:0;font-weight:800}
+    .hero p{font-size:1.2rem;opacity:.9}
+    .cta{
+      display:inline-flex;
+      gap:15px;
+      margin-top:30px;
+    }
+    .btn{
+      padding:14px 28px;
+      border-radius:999px;
+      background:linear-gradient(135deg,var(--primary),var(--secondary));
+      font-weight:600;
+      color:#fff;
+    }
+    .btn.outline{
+      background:transparent;
+      border:1px solid rgba(255,255,255,.3);
+    }
+
+    /* SECTION */
+    section{
+      padding:120px 20px;
+      max-width:1200px;
+      margin:auto;
+    }
+    h2{
+      font-size:2.6rem;
+      margin-bottom:20px;
+      background:linear-gradient(135deg,var(--primary),var(--secondary));
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+    .subtitle{opacity:.7;max-width:700px}
+
+    /* SYSTEM GRID */
+    .system{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:30px;
+      margin-top:60px;
+    }
+    .module{
+      background:var(--glass);
+      backdrop-filter:blur(14px);
+      border-radius:24px;
+      padding:30px;
+      transition:.4s;
+      border:1px solid rgba(255,255,255,.1);
+    }
+    .module:hover{transform:translateY(-10px)}
+    .module i{
+      font-size:2.2rem;
+      margin-bottom:15px;
+      background:linear-gradient(135deg,var(--primary),var(--secondary));
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+    .module h3{margin:10px 0}
+    .module p{opacity:.8;font-size:.95rem}
+
+    /* PORTFOLIO */
+    .portfolio{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:20px;
+      margin-top:60px;
+    }
+    .work{
+      position:relative;
+      border-radius:22px;
+      overflow:hidden;
+      background:#020617;
+      height:260px;
+    }
+    .work::after{
+      content:"";
+      position:absolute;inset:0;
+      background:linear-gradient(to top,rgba(0,0,0,.85),transparent);
+    }
+    .work span{
+      position:absolute;
+      bottom:20px;left:20px;
+      z-index:2;
+      font-weight:600;
+    }
+
+    /* ARTICLE */
+    .articles{
+      display:grid;
+      grid-template-columns:2fr 1fr;
+      gap:40px;
+      margin-top:60px;
+    }
+    .post{
+      background:var(--glass);
+      padding:40px;
+      border-radius:28px;
+      backdrop-filter:blur(14px);
+    }
+    .post h3{font-size:1.6rem}
+    .post p{opacity:.85}
+    .sidebar .module{margin-bottom:20px}
+
+    /* FOOTER */
+    footer{
+      padding:80px 20px;
+      text-align:center;
+      background:#020617;
+      border-top:1px solid rgba(255,255,255,.05);
+    }
+    footer p{opacity:.5}
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+      .hero h1{font-size:2.6rem}
+      .articles{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hero">
+    <img src="logo.png" alt="MINS MEDIA" />
+    <h1>MINS MEDIA</h1>
+    <p>Multimedia Creative System<br>Visual • Video • Audio • Digital Knowledge</p>
+    <div class="cta">
+      <a href="https://instagram.com/minsmedia_" class="btn">Portfolio Visual</a>
+      <a href="#system" class="btn outline">Creative System</a>
+    </div>
+  </div>
+</header>
+
+<section id="system">
+  <h2>CREATIVE MULTIMEDIA SYSTEM</h2>
+  <p class="subtitle">Sistem kerja kreatif terintegrasi dari ide, produksi, distribusi, hingga edukasi berkelanjutan.</p>
+
+  <div class="system">
+    <div class="module">
+      <i class="fa-solid fa-video"></i>
+      <h3>Visual & Cinematic</h3>
+      <p>Film dokumenter, cinematic video, multicam event, visual storytelling.</p>
+    </div>
+    <div class="module">
+      <i class="fa-solid fa-pen-nib"></i>
+      <h3>Design & Branding</h3>
+      <p>Logo, identitas visual, campaign design, motion graphic.</p>
+    </div>
+    <div class="module">
+      <i class="fa-solid fa-music"></i>
+      <h3>Audio & Sound</h3>
+      <p>Opening music, sound design, narasi, choir & scoring.</p>
+    </div>
+    <div class="module">
+      <i class="fa-solid fa-diagram-project"></i>
+      <h3>Digital System</h3>
+      <p>Konten sosial media, distribusi digital, sistem branding berkelanjutan.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>PORTFOLIO MULTIMEDIA</h2>
+  <p class="subtitle">Kurasi karya visual dan narasi dari Instagram & project lapangan.</p>
+
+  <div class="portfolio">
+    <div class="work"><span>Documentary Film</span></div>
+    <div class="work"><span>Creative Branding</span></div>
+    <div class="work"><span>Event & Multicam</span></div>
+    <div class="work"><span>Social Media Campaign</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>EDUKASI & ARTIKEL</h2>
+  <p class="subtitle">Berbagi ilmu, pengalaman, dan sistem kerja kreatif untuk komunitas dan generasi kreator.</p>
+
+  <div class="articles">
+    <div class="post">
+      <h3>Membangun Sistem Multimedia yang Berkelanjutan</h3>
+      <p>Sebuah pendekatan kreatif yang tidak hanya menghasilkan karya, tetapi membangun ekosistem nilai, edukasi, dan dampak jangka panjang.</p>
+    </div>
+    <div class="sidebar">
+      <div class="module">
+        <h3>Topik Edukasi</h3>
+        <p>• Visual Storytelling<br>• Branding Strategy<br>• Media Production<br>• Creative Mindset</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>HUBUNGI KAMI</h2>
+  <p class="subtitle">Ruang komunikasi langsung untuk kolaborasi, project, dan pengembangan sistem multimedia.</p>
+
+  <div class="system">
+    <div class="module">
+      <i class="fa-brands fa-whatsapp"></i>
+      <h3>WhatsApp</h3>
+      <p>Komunikasi cepat & langsung untuk project.</p>
+      <a class="btn" href="https://wa.me/628000000000" target="_blank">Chat WhatsApp</a>
+    </div>
+
+    <div class="module">
+      <i class="fa-brands fa-instagram"></i>
+      <h3>Instagram</h3>
+      <p>Portfolio visual & komunikasi kreatif.</p>
+      <a class="btn" href="https://instagram.com/minsmedia_" target="_blank">@minsmedia_</a>
+    </div>
+
+    <div class="module">
+      <i class="fa-solid fa-envelope"></i>
+      <h3>Email</h3>
+      <p>Kerja sama resmi & institusional.</p>
+      <a class="btn" href="mailto:minsmedia@gmail.com">minsmedia@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 MINS MEDIA – Multimedia Creative System</p>
+</footer>
+
+</body>
+</html>
