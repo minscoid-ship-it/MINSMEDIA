@@ -6,27 +6,57 @@
   <title>MINS MEDIA – Creative Multimedia Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    body { margin:0; font-family:'Inter',sans-serif; background:#0e0e11; color:#f5f5f7; }
+    body { margin:0; font-family:'Inter',sans-serif; background:#0e0e11; color:#f5f5f7; overflow-x:hidden; }
     a { color:inherit; text-decoration:none; }
     section { padding:80px 6%; }
     h1,h2,h3 { margin:0 0 16px; }
     p { line-height:1.7; color:#c9c9cf; }
 
     /* HERO */
-    .hero { min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; background:radial-gradient(circle at top, #1c1c24, #0e0e11); }
-    .hero h1 { font-size:48px; font-weight:700; }
-    .hero p { max-width:720px; margin:24px auto; }
-    .hero .cta { display:inline-block; margin-top:32px; padding:16px 36px; border-radius:40px; background:linear-gradient(135deg,#6a5cff,#9b8cff); color:#fff; font-weight:600; transition:all .3s ease; }
-    .hero .cta:hover { transform:translateY(-4px); box-shadow:0 20px 60px rgba(106,92,255,.4); }
+    .hero {
+  position:relative;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(14,14,17,.85),rgba(14,14,17,.95));
+  z-index:2;
+}
+.hero video{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:brightness(.7) contrast(1.1) saturate(.9);
+}
+.hero > div{position:relative;z-index:3;}
+    .logo-hero { max-width:340px; width:80%; margin-bottom:32px; cursor:pointer; animation:logoIn 1.6s ease forwards; transition:transform .6s ease, filter .6s ease; filter:drop-shadow(0 20px 60px rgba(155,140,255,.6)); }
+    .logo-hero:hover { transform:scale(1.04); filter:drop-shadow(0 30px 80px rgba(185,170,255,.9)); }
+    .logo-hero:active { transform:scale(0.96) rotate(-1deg); filter:drop-shadow(0 10px 40px rgba(120,110,255,.9)) hue-rotate(25deg); }
 
-    /* PORTFOLIO HUB */
+    @keyframes logoIn {
+      0% { opacity:0; transform:scale(.7) translateY(40px); }
+      100% { opacity:1; transform:scale(1) translateY(0); }
+    }
+
+    .cta { display:inline-block; margin-top:32px; padding:16px 36px; border-radius:40px; background:linear-gradient(135deg,#6a5cff,#9b8cff); color:#fff; font-weight:600; transition:all .3s ease; }
+    .cta:hover { transform:translateY(-4px); box-shadow:0 20px 60px rgba(106,92,255,.4); }
+
+    /* HUB */
     .hub { background:#121218; }
     .hub-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:24px; margin-top:40px; }
-    .hub-item { padding:32px; border-radius:20px; background:linear-gradient(180deg,#1a1a22,#121218); transition:.3s; cursor:pointer; }
-    .hub-item:hover { transform:translateY(-6px); background:linear-gradient(180deg,#222234,#15151d); }
-    .hub-item h3 { margin-bottom:12px; }
+    .hub-item { padding:32px; border-radius:20px; background:linear-gradient(180deg,#1a1a22,#121218); transition:.4s; cursor:pointer; }
+    .hub-item:hover { transform:translateY(-8px) scale(1.02); background:linear-gradient(180deg,#26263a,#15151d); }
 
-    /* PORTFOLIO DETAIL */
+    /* PORTFOLIO */
     .portfolio-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; margin-top:40px; }
     .work { aspect-ratio:9/16; background:#000; border-radius:18px; overflow:hidden; }
     .work iframe { width:100%; height:100%; border:none; }
@@ -34,8 +64,8 @@
     /* ARTICLE */
     .articles { background:#0f0f14; }
     .article-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:24px; margin-top:40px; }
-    .article { padding:28px; border-radius:18px; background:#181820; }
-    .article h3 { font-size:18px; }
+    .article { padding:28px; border-radius:18px; background:#181820; transition:.3s; }
+    .article:hover { transform:translateY(-6px); background:#20202c; }
 
     /* CONTACT */
     .contact { text-align:center; background:#121218; }
@@ -48,8 +78,11 @@
 
 <!-- HERO / SAPUAN PERTAMA -->
 <section class="hero">
+  <video autoplay muted loop playsinline>
+    <source src="background-creative.mp4" type="video/mp4">
+  </video>
   <div>
-    <img src="MINS_MEDIA.png" alt="MINS MEDIA Logo" style="max-width:320px;width:80%;margin-bottom:32px;filter:drop-shadow(0 20px 60px rgba(155,140,255,.6));" />
+    <img src="MINS_MEDIA.png" alt="MINS MEDIA Logo" class="logo-hero" onclick="document.getElementById('hub').scrollIntoView({behavior:'smooth'})" />
     <p style="font-size:18px;max-width:760px;margin:0 auto;">Kami merancang visual, video, dan narasi digital yang bukan hanya indah, tetapi berdampak. Dari dokumenter, cinematic, hingga edukasi kreatif.</p>
     <a href="#hub" class="cta">JELAJAHI KARYA</a>
   </div>
