@@ -3,333 +3,247 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MINS MEDIA – Creative Multimedia Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>Layak Story | Setiap Rasa Layak Di Abadikan</title>
+  <meta name="description" content="Layak Story – Jasa fotografi & video profesional. Prewedding, wedding, maternity, dan event storytelling." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    body { margin:0; font-family:'Inter',sans-serif; background:#0e0e11; color:#f5f5f7; overflow-x:hidden; }
-    a { color:inherit; text-decoration:none; }
-    section { padding:80px 6%; }
-    h1,h2,h3 { margin:0 0 16px; }
-    p { line-height:1.7; color:#c9c9cf; }
-
-    /* HERO */
-    .hero {
-  position:relative;
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  overflow:hidden;
-}
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(180deg,rgba(14,14,17,.85),rgba(14,14,17,.95));
-  z-index:2;
-}
-.hero video{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  filter:brightness(.7) contrast(1.1) saturate(.9);
-}
-.hero > div{position:relative;z-index:3;}
-    .logo-hero { max-width:340px; width:80%; margin-bottom:32px; cursor:pointer; animation:logoIn 1.6s ease forwards; transition:transform .6s ease, filter .6s ease; filter:drop-shadow(0 20px 60px rgba(155,140,255,.6)); }
-    .logo-hero:hover { transform:scale(1.04); filter:drop-shadow(0 30px 80px rgba(185,170,255,.9)); }
-    .logo-hero:active { transform:scale(0.96) rotate(-1deg); filter:drop-shadow(0 10px 40px rgba(120,110,255,.9)) hue-rotate(25deg); }
-
-    @keyframes logoIn {
-      0% { opacity:0; transform:scale(.7) translateY(40px); }
-      100% { opacity:1; transform:scale(1) translateY(0); }
+    :root {
+      --primary: #D12457;
+      --secondary: #F9AE20;
+      --dark: #222;
+      --light: #ffffff;
+      --gray: #f6f6f6;
     }
 
-    .cta { display:inline-block; margin-top:32px; padding:16px 36px; border-radius:40px; background:linear-gradient(135deg,#6a5cff,#9b8cff); color:#fff; font-weight:600; transition:all .3s ease; }
-    .cta:hover { transform:translateY(-4px); box-shadow:0 20px 60px rgba(106,92,255,.4); }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-    /* HUB */
-    .hub { background:#121218; }
-    .hub-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:24px; margin-top:40px; }
-    .hub-item { padding:32px; border-radius:20px; background:linear-gradient(180deg,#1a1a22,#121218); transition:.4s; cursor:pointer; }
-    .hub-item:hover { transform:translateY(-8px) scale(1.02); background:linear-gradient(180deg,#26263a,#15151d); }
+    body {
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
 
-    /* PORTFOLIO */
-    .portfolio-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; margin-top:40px; }
-    .work { aspect-ratio:9/16; background:#000; border-radius:18px; overflow:hidden; }
-    .work iframe { width:100%; height:100%; border:none; }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-    /* ARTICLE */
-    .articles { background:#0f0f14; }
-    .article-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:24px; margin-top:40px; }
-    .article { padding:28px; border-radius:18px; background:#181820; transition:.3s; }
-    .article:hover { transform:translateY(-6px); background:#20202c; }
+    header {
+      padding: 24px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      background: #fff;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,.05);
+    }
 
-    /* CONTACT */
-    .contact { text-align:center; background:#121218; }
-    .contact a { display:inline-block; margin-top:24px; padding:14px 32px; border-radius:30px; background:#25d366; color:#000; font-weight:600; }
+    header img {
+      height: 48px;
+    }
 
-    footer { padding:40px; text-align:center; color:#777; }
+    nav a {
+      margin-left: 24px;
+      font-weight: 500;
+    }
+
+    .btn {
+      background: linear-gradient(45deg, var(--primary), var(--secondary));
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 40px;
+      display: inline-block;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 100px 60px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 32px;
+    }
+
+    .hero img {
+      width: 100%;
+      border-radius: 24px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      color: var(--primary);
+    }
+
+    .services, .portfolio, .testi {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 32px;
+      border-radius: 24px;
+      box-shadow: 0 8px 30px rgba(0,0,0,.06);
+      text-align: center;
+    }
+
+    .card h3 {
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+      gap: 24px;
+    }
+
+    .video-box {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+      gap: 24px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 20px;
+    }
+
+    footer {
+      background: var(--primary);
+      color: #fff;
+      padding: 60px;
+    }
+
+    footer a {
+      color: #fff;
+      font-weight: 500;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+      gap: 32px;
+    }
+
+    @media(max-width: 768px) {
+      header { padding: 20px; }
+      section { padding: 80px 20px; }
+      .hero { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 36px; }
+    }
   </style>
 </head>
 <body>
 
-<!-- HERO / SAPUAN PERTAMA -->
-<section class="hero">
-  <video autoplay muted loop playsinline>
-    <source src="background-creative.mp4" type="video/mp4">
-  </video>
+<header>
+  <img src="logo.png" alt="Layak Story">
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">Tentang</a>
+    <a href="#service">Layanan</a>
+    <a href="#portfolio">Portofolio</a>
+    <a href="#contact" class="btn">Kontak</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
   <div>
-    <img src="MINS_MEDIA.png" alt="MINS MEDIA Logo" class="logo-hero" onclick="document.getElementById('hub').scrollIntoView({behavior:'smooth'})" />
-    <p style="font-size:18px;max-width:760px;margin:0 auto;">Kami merancang visual, video, dan narasi digital yang bukan hanya indah, tetapi berdampak. Dari dokumenter, cinematic, hingga edukasi kreatif.</p>
-    <a href="#hub" class="cta">JELAJAHI KARYA</a>
+    <h1>Setiap Rasa Layak Di Abadikan</h1>
+    <p>Layak Story menghadirkan fotografi dan video storytelling profesional untuk setiap momen berharga dalam hidup Anda.</p>
+    <a href="https://wa.me/6285794552908" class="btn">Konsultasi WhatsApp</a>
+  </div>
+  <img src="hero.jpg" alt="Layak Story Visual">
+</section>
+
+<section id="about">
+  <div class="section-title">
+    <h2>Tentang Layak Story</h2>
+  </div>
+  <p style="max-width:800px;margin:auto;text-align:center;">Kami adalah visual storyteller yang percaya bahwa setiap cerita hidup memiliki rasa yang layak untuk diabadikan dengan jujur, hangat, dan profesional.</p>
+</section>
+
+<section id="service" style="background:var(--gray)">
+  <div class="section-title"><h2>Layanan Kami</h2></div>
+  <div class="services">
+    <div class="card"><h3>Prewedding</h3><p>Konsep personal & emosional.</p></div>
+    <div class="card"><h3>Wedding</h3><p>Mengabadikan hari sakral.</p></div>
+    <div class="card"><h3>Maternity</h3><p>Keindahan masa penantian.</p></div>
+    <div class="card"><h3>Event</h3><p>Cerita dalam setiap acara.</p></div>
   </div>
 </section>
 
-<!-- HUB PORTFOLIO (SATU SAPUAN → MASUK KE BANYAK) -->
-<section id="hub" class="hub">
-  <h2>PORTFOLIO UTAMA</h2>
-  <p>Pilih kategori karya sesuai kebutuhan Anda.</p>
-
-  <div class="hub-grid">
-    <div class="hub-item" onclick="document.getElementById('video').scrollIntoView({behavior:'smooth'})">
-      <h3>Video Cinematic</h3>
-      <p>Film pendek, cinematic reels, dokumenter visual.</p>
-    </div>
-    <div class="hub-item">
-      <h3>Brand & Event</h3>
-      <p>After movie, company profile, branding visual.</p>
-    </div>
-    <div class="hub-item">
-      <h3>Creative Campaign</h3>
-      <p>Konten kampanye digital & storytelling.</p>
-    </div>
-    <div class="hub-item">
-      <h3>Edukasi Multimedia</h3>
-      <p>Konten pembelajaran visual & sosial.</p>
-    </div>
+<section id="portfolio">
+  <div class="section-title"><h2>Portofolio</h2></div>
+  <div class="portfolio">
+    <div class="card">Foto / Video 1</div>
+    <div class="card">Foto / Video 2</div>
+    <div class="card">Foto / Video 3</div>
   </div>
 </section>
 
-<!-- PORTFOLIO DETAIL -->
-<section id="video">
-  <h2>VIDEO PORTFOLIO</h2>
-  <p>Koleksi video pilihan berbasis Instagram Reels.</p>
+<section id="process" style="background:var(--gray)">
+  <div class="section-title"><h2>Cara Kerja & Hasil</h2></div>
+  <div class="process">
+    <div class="card">Konsultasi & Konsep</div>
+    <div class="card">Produksi Profesional</div>
+    <div class="card">Editing Storytelling</div>
+    <div class="card">Final Delivery</div>
+  </div>
 
-  <div class="portfolio-grid">
-    <div class="work">
-      <iframe
-        src="https://www.youtube.com/embed/Yskfihmkv7g?rel=0&modestbranding=1"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
-    <div class="work"><iframe src="https://www.instagram.com/reel/C8_XRd0y6k5/embed" allowfullscreen></iframe></div>
-    <div class="work"><iframe src="https://www.instagram.com/reel/DHkpqkjzL7A/embed" allowfullscreen></iframe></div>
-    <div class="work"></div>
+  <div class="video-box">
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID"></iframe>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID"></iframe>
   </div>
 </section>
 
-<!-- ARTICLES -->
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MINS MEDIA – Creative Multimedia Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body { margin:0; font-family:'Inter',sans-serif; background:#0e0e11; color:#f5f5f7; overflow-x:hidden; }
-    a { color:inherit; text-decoration:none; }
-    section { padding:80px 6%; }
-    h1,h2,h3 { margin:0 0 16px; }
-    p { line-height:1.7; color:#c9c9cf; }
-
-    /* HERO */
-    .hero {
-  position:relative;
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  overflow:hidden;
-}
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(180deg,rgba(14,14,17,.85),rgba(14,14,17,.95));
-  z-index:2;
-}
-.hero video{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  filter:brightness(.7) contrast(1.1) saturate(.9);
-}
-.hero > div{position:relative;z-index:3;}
-    .logo-hero { max-width:340px; width:80%; margin-bottom:32px; cursor:pointer; animation:logoIn 1.6s ease forwards; transition:transform .6s ease, filter .6s ease; filter:drop-shadow(0 20px 60px rgba(155,140,255,.6)); }
-    .logo-hero:hover { transform:scale(1.04); filter:drop-shadow(0 30px 80px rgba(185,170,255,.9)); }
-    .logo-hero:active { transform:scale(0.96) rotate(-1deg); filter:drop-shadow(0 10px 40px rgba(120,110,255,.9)) hue-rotate(25deg); }
-
-    @keyframes logoIn {
-      0% { opacity:0; transform:scale(.7) translateY(40px); }
-      100% { opacity:1; transform:scale(1) translateY(0); }
-    }
-
-    .cta { display:inline-block; margin-top:32px; padding:16px 36px; border-radius:40px; background:linear-gradient(135deg,#6a5cff,#9b8cff); color:#fff; font-weight:600; transition:all .3s ease; }
-    .cta:hover { transform:translateY(-4px); box-shadow:0 20px 60px rgba(106,92,255,.4); }
-
-    /* HUB */
-    .hub { background:#121218; }
-    .hub-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:24px; margin-top:40px; }
-    .hub-item { padding:32px; border-radius:20px; background:linear-gradient(180deg,#1a1a22,#121218); transition:.4s; cursor:pointer; }
-    .hub-item:hover { transform:translateY(-8px) scale(1.02); background:linear-gradient(180deg,#26263a,#15151d); }
-
-    /* PORTFOLIO */
-    .portfolio-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; margin-top:40px; }
-    .work { aspect-ratio:9/16; background:#000; border-radius:18px; overflow:hidden; position:relative; }
-    .work iframe { width:100%; height:100%; border:none; pointer-events:none; }
-
-    /* ARTICLE */
-    .articles { background:#0f0f14; }
-    .article-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:24px; margin-top:40px; }
-    .article { padding:28px; border-radius:18px; background:#181820; transition:.3s; }
-    .article:hover { transform:translateY(-6px); background:#20202c; }
-
-    /* CONTACT */
-    .contact { text-align:center; background:#121218; }
-    .contact a { display:inline-block; margin-top:24px; padding:14px 32px; border-radius:30px; background:#25d366; color:#000; font-weight:600; }
-
-    footer { padding:40px; text-align:center; color:#777; }
-  </style>
-</head>
-<body>
-
-<!-- HERO / SAPUAN PERTAMA -->
-<section class="hero">
-  <video autoplay muted loop playsinline>
-    <source src="background-creative.mp4" type="video/mp4">
-  </video>
-  <div>
-    <img src="MINS_MEDIA.png" alt="MINS MEDIA Logo" class="logo-hero" onclick="document.getElementById('hub').scrollIntoView({behavior:'smooth'})" />
-    <p style="font-size:18px;max-width:760px;margin:0 auto;">Kami merancang visual, video, dan narasi digital yang bukan hanya indah, tetapi berdampak. Dari dokumenter, cinematic, hingga edukasi kreatif.</p>
-    <a href="#hub" class="cta">JELAJAHI KARYA</a>
-  </div>
-</section>
-
-<!-- HUB PORTFOLIO (SATU SAPUAN → MASUK KE BANYAK) -->
-<section id="hub" class="hub">
-  <h2>PORTFOLIO UTAMA</h2>
-  <p>Pilih kategori karya sesuai kebutuhan Anda.</p>
-
-  <div class="hub-grid">
-    <div class="hub-item" onclick="document.getElementById('video').scrollIntoView({behavior:'smooth'})">
-      <h3>Video Cinematic</h3>
-      <p>Film pendek, cinematic reels, dokumenter visual.</p>
-    </div>
-    <div class="hub-item">
-      <h3>Brand & Event</h3>
-      <p>After movie, company profile, branding visual.</p>
-    </div>
-    <div class="hub-item">
-      <h3>Creative Campaign</h3>
-      <p>Konten kampanye digital & storytelling.</p>
-    </div>
-    <div class="hub-item">
-      <h3>Edukasi Multimedia</h3>
-      <p>Konten pembelajaran visual & sosial.</p>
-    </div>
-  </div>
-</section>
-
-<!-- PORTFOLIO DETAIL -->
-<section id="video">
-  <h2>VIDEO PORTFOLIO</h2>
-  <p>Koleksi video pilihan berbasis Instagram Reels.</p>
-
-  <div class="portfolio-grid">
-    <div class="work" 
-     data-video="https://www.youtube.com/embed/Yskfihmkv7g?autoplay=1&mute=1&rel=0&modestbranding=1"
-     data-thumb="https://www.youtube.com/embed/Yskfihmkv7g?rel=0&modestbranding=1">
-  <iframe src="https://www.youtube.com/embed/Yskfihmkv7g?rel=0&modestbranding=1"></iframe>
-</div>
-    <div class="work"><iframe src="https://www.instagram.com/reel/C8_XRd0y6k5/embed" allowfullscreen></iframe></div>
-    <div class="work"><iframe src="https://www.instagram.com/reel/DHkpqkjzL7A/embed" allowfullscreen></iframe></div>
-    <div class="work"></div>
-  </div>
-</section>
-
-<!-- ARTICLES -->
-<section class="articles">
-  <h2>INSIGHT & EDUKASI MULTIMEDIA</h2>
-  <p>Wawasan global tentang visual, teknologi, dan storytelling kreatif.</p>
-
-  <div class="article-grid">
-    <div class="article">
-      <h3>Multimedia sebagai Bahasa Visual Global</h3>
-      <p>
-        Di era digital, multimedia telah menjadi bahasa universal. Perpaduan visual, audio, dan gerak
-        memungkinkan pesan lintas budaya tersampaikan lebih cepat, emosional, dan mudah dipahami oleh berbagai audiens di seluruh dunia.
-      </p>
-    </div>
-
-    <div class="article">
-      <h3>Peran Video dalam Membangun Identitas Brand</h3>
-      <p>
-        Video tidak lagi sekadar konten, tetapi representasi identitas brand.
-        Tone warna, ritme editing, dan narasi visual membentuk persepsi audiens serta meningkatkan kepercayaan dan daya ingat terhadap sebuah brand.
-      </p>
-    </div>
-
-    <div class="article">
-      <h3>Cinematic Content: Dari Estetika ke Emosi</h3>
-      <p>
-        Konten cinematic menggabungkan keindahan visual dengan kekuatan emosi.
-        Pendekatan ini menjadikan cerita lebih hidup, relevan, dan berkesan di tengah banjir informasi digital.
-      </p>
-    </div>
-
-    <div class="article">
-      <h3>Masa Depan Multimedia: Interaktif & Berbasis Pengalaman</h3>
-      <p>
-        Multimedia terus berkembang menuju pengalaman yang lebih imersif melalui interaksi,
-        teknologi visual, dan storytelling berbasis pengalaman. Namun, esensinya tetap sama: menyampaikan pesan dengan makna.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact">
-  <h2>HUBUNGI KAMI</h2>
-  <p>Diskusikan ide, proyek, dan kolaborasi kreatif bersama kami.</p>
-  <a href="https://wa.me/62XXXXXXXXXX" target="_blank">WhatsApp Langsung</a>
+<section id="contact">
+  <div class="section-title"><h2>Hubungi Kami</h2></div>
+  <p style="text-align:center;">WhatsApp: <strong>0857 9455 2908</strong><br>Email: layakstory@gmail.com</p>
 </section>
 
 <footer>
-  © 2025 MINS MEDIA – Creative Multimedia
+  <div class="footer-grid">
+    <div>
+      <h3>Layak Story</h3>
+      <p>Setiap rasa layak di abadikan.</p>
+    </div>
+    <div>
+      <p><a href="https://wa.me/6285794552908">WhatsApp</a></p>
+      <p><a href="mailto:layakstory@gmail.com">Email</a></p>
+    </div>
+  </div>
 </footer>
 
 </body>
 </html>
 
-
-<!-- CONTACT -->
-<section class="contact">
-  <h2>HUBUNGI KAMI</h2>
-  <p>Diskusikan ide, proyek, dan kolaborasi kreatif bersama kami.</p>
-  <a href="https://wa.me/62XXXXXXXXXX" target="_blank">WhatsApp Langsung</a>
-</section>
-
-<footer>
-  © 2025 MINS MEDIA – Creative Multimedia
-</footer>
-
-</body>
-</html>
